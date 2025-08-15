@@ -60,11 +60,11 @@ async fn post_maior_divisor_comum(
         "O maior divisor comum do numero {} e {} eh <b>{}</b>",
         form.numero1,
         form.numero2,
-        maior_divisor_comum(form.numero1, form.numero2)
+        calcular_maior_divisor_comum(form.numero1, form.numero2)
     ))
 }
 
-fn maior_divisor_comum(mut numero1: u64, mut numero2: u64) -> u64 {
+fn calcular_maior_divisor_comum(mut numero1: u64, mut numero2: u64) -> u64 {
     assert!(numero1 != 0 && numero2 != 0);
 
     while numero2 != 0 {
@@ -81,7 +81,7 @@ fn maior_divisor_comum(mut numero1: u64, mut numero2: u64) -> u64 {
 
 #[test]
 fn test_maior_divisor_comum() {
-    assert_eq!(maior_divisor_comum(14, 15), 1);
+    assert_eq!(calcular_maior_divisor_comum(14, 15), 1);
 
-    assert_eq!(maior_divisor_comum(2 * 3 * 5 * 11 * 17, 3 * 7 * 11 * 13 * 19), 3 * 11)
+    assert_eq!(calcular_maior_divisor_comum(2 * 3 * 5 * 11 * 17, 3 * 7 * 11 * 13 * 19), 3 * 11)
 }
