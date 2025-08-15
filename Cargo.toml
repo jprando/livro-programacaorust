@@ -1,0 +1,10 @@
+[package]
+name = "teste-web"
+description = "implementacao de uma calculadora de maximo divisor comum web"
+version = "0.1.0"
+edition = "2024"
+authors = ["Jeudi Prando <jeudiprando@gmail.com>"]
+
+[dependencies]
+actix-web = "4"
+serde = { version = "1.0", features = ["derive"] }
